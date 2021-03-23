@@ -20,6 +20,14 @@ mod tests {
         insertion_sort(&mut names);
         assert_eq!(["adam","bert","cedric"], names);
     }
+
+    #[test]
+    fn letters() {
+        let mut letters = ['b', 'k', 'A', 'p'];
+        insertion_sort(&mut letters);
+        assert_eq!(['A','b','k','p'], letters);
+    }
+
     #[test]
     fn int_numbers() {
         let mut integers_list = [3,2,6,9,1,0];
