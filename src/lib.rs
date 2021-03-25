@@ -53,5 +53,19 @@ mod tests {
         insertion_sort(&mut same);
         assert_eq!([3,3,3,3,3], same);
     }
+    #[test]
+    fn not_equal() {
+        let mut not_equal_numbers = [3,5,7];
+        insertion_sort(&mut not_equal_numbers);
+        assert_ne!([3,5,6], not_equal_numbers);
+    }
+
+    #[test]
+    fn empty_vec() {
+        let mut empty_vector: Vec<i32> = Vec::new();
+        let empty_vector_copy = empty_vector.clone();
+        insertion_sort(&mut empty_vector);
+        assert_eq!(empty_vector_copy , empty_vector);
+    }
 
 }
